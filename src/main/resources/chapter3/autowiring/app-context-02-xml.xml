@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <!-- Remove the primary attribute to see the main method of CTarget class throw error -->
+    <bean id="fooOne" class="dev.bnayagrawal.prospring5.chapter3.autowiring.FooImplOne"
+        primary="true"/>
+
+    <bean id="fooTwo" class="dev.bnayagrawal.prospring5.chapter3.autowiring.FooImplOne"/>
+    <bean id="bar" class="dev.bnayagrawal.prospring5.chapter3.autowiring.Bar"/>
+
+    <bean id="targetByType" autowire="byType" class="dev.bnayagrawal.prospring5.chapter3.autowiring.CTarget"
+          lazy-init="true"/>
+</beans>

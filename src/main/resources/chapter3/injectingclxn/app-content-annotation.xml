@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+               http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+                http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!-- bean definitions here -->
+    <context:component-scan
+            base-package="dev.bnayagrawal.prospring5.chapter3.injectingclxn"/>
+
+    <util:map id="map" map-class="java.util.HashMap">
+        <entry key="k1" value="American Burger"/>
+        <entry key="k2" value-ref="lyricHolder"/>
+    </util:map>
+
+    <util:properties id="props">
+        <prop key="Coke">Large</prop>
+        <prop key="Ketchup">Tomato</prop>
+    </util:properties>
+
+    <util:set id="set" set-class="java.util.HashSet">
+        <value>Tomorrow never comes</value>
+        <ref bean="lyricHolder"/>
+    </util:set>
+
+    <util:list id="list" list-class="java.util.ArrayList">
+        <value>Get busy living or get busy dying</value>
+        <ref bean="lyricHolder"/>
+    </util:list>
+
+</beans>

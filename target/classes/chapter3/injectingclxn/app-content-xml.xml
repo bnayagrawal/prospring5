@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="lyricHolder" class="dev.bnayagrawal.prospring5.chapter3.injectingclxn.LyricHolder"/>
+
+    <bean id="injectCollection"
+          class="dev.bnayagrawal.prospring5.chapter3.injectingclxn.CollectionInjection">
+
+        <property name="map">
+            <map>
+                <entry key="k1" value="American Burger"/>
+                <entry key="k2" value-ref="lyricHolder"/>
+            </map>
+        </property>
+
+        <property name="props">
+            <props>
+                <prop key="Coke">Large</prop>
+                <prop key="Ketchup">Tomato</prop>
+            </props>
+        </property>
+
+        <property name="set">
+            <set>
+                <value>Tomorrow never comes</value>
+                <ref bean="lyricHolder"/>
+            </set>
+        </property>
+
+        <property name="list">
+            <list>
+                <value>Get busy living or get busy dying</value>
+                <ref bean="lyricHolder"/>
+            </list>
+        </property>
+    </bean>
+</beans>

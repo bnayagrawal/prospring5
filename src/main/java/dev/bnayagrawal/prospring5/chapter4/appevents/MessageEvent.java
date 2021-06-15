@@ -1,0 +1,16 @@
+package dev.bnayagrawal.prospring5.chapter4.appevents;
+
+import org.springframework.context.ApplicationEvent;
+
+public class MessageEvent extends ApplicationEvent {
+    private String msg;
+
+    public MessageEvent(Object source, String msg) {
+        super(source);
+        this.msg = msg;
+    }
+
+    public String getMessage() {
+        return msg;
+    }
+}

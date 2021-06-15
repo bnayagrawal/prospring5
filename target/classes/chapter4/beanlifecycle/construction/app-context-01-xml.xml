@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-lazy-init="true"
+        default-init-method="init">
+
+    <!-- bean definitions here -->
+
+    <bean id="singerOne" class="dev.bnayagrawal.prospring5.chapter4.beanlifecycle.construction.Singer"
+          p:name="John Mayer" p:age="39"/>
+
+    <bean id="singerTwo" class="dev.bnayagrawal.prospring5.chapter4.beanlifecycle.construction.Singer"
+          p:age="72"/>
+    <bean id="singerThree" class="dev.bnayagrawal.prospring5.chapter4.beanlifecycle.construction.Singer"
+          p:name="John Butler"/>
+
+    <!-- The init-method attribute can be used on bean elements, when they share common init method
+         it can be declared at the root level like this configuration file -->
+</beans>
