@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="18fd8c77-fb82-4664-a292-5c7e6d7f7929" name="musicdb" url="jdbc:postgresql://localhost:5432/musicdb" driverClass="org.postgresql.Driver" />
+    </data-sources>
+  </component>
+</project>
